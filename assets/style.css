@@ -51,7 +51,7 @@ body {
 .nav-wrapper {
     display: flex;
     justify-content: space-around;
-    padding: 9px;
+    padding: 5px;
     background-color: rgba(18, 184, 142, 0.514);
     border-top: 2px solid #83d29f;
 }
