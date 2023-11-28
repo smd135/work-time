@@ -31,6 +31,8 @@ body {
 
 .nav-item {
     padding: 8px;
+    width: 46px;
+    height: 46px;
     /* background-color: #000; */
     border-radius: 100%;
 }
