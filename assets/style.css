@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden {
+    display: none;
+    visibility: none;
+    opacity: 0;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: #3d3d3d;
+}
+
+.container {
+    padding: 7px;
+    width: 100%;
+}
+
+.nav-item {
+    padding: 12px;
+    /* background-color: #000; */
+    border-radius: 100%;
+}
+
+.nav-item.active {
+    background-color: rgba(68, 190, 119, 0.71);
+    color: white;
+}
+
+.nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 9px;
+    background-color: #fff;
+    border-top: 2px solid #83d29f;
+}
+
+.active {
+    background-color: #83d29f;
+}
+
+.top-bar {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    background-color: rgba(115, 229, 162, 0.425);
+}
+
+.top-progress-bar {
+    position: absolute;
+    background-color: rgb(115, 229, 162);
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10px;
+}
+
+.month-year-inner {
+    height: 30px;
+}
+
+.month-year-select {
+    display: flex;
+    gap: 10px;
+    right: 5px;
+    height: 100%;
+}
+
+.month-select,
+.year-select {
+    position: relative;
+    display: inline-block;
+    border: 2px solid rgba(31, 68, 20, 0.3);
+    border-radius: 8px;
+    height: 100%;
+}
+
+.month-select {
+    width: 100%;
+
+}
+
+.year-select {
+    width: 100%;
+}
+
+.input-item input {
+    position: relative;
+}
+
+.input-item input::-webkit-datetime-edit,
+input::-webkit-inner-spin-button,
+input::-webkit-clear-button {
+    display: none;
+}
+
+.input-item input::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 25%;
+    right: 5px;
+    opacity: 0.7;
+}
+
+input[type=datetime-local] {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: rgba(255, 49, 162, 0.363) !important;
+    position: relative;
+}
+
+.input-placeholder {
+    display: flex;
+    align-items: center;
+    font-family: 'Noto Sans', sans-serif !important;
+    position: absolute;
+    transform: translateY(30%);
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    letter-spacing: 0;
+    padding-left: 10px;
+
+}
+
+.month-select select,
+.year-select select {
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 16px;
+    height: 100%;
+    background: transparent;
+}
+
+.month-select select {
+    position: relative;
+    margin-right: 52px;
+}
+
+.year-select select {
+    position: relative;
+    margin-right: 10px;
+}
+
+.month-select::after,
+.month-select::before,
+.year-select::after,
+.year-select::before {
+    position: absolute;
+    right: 8px;
+    top: 14px;
+    content: '';
+    width: 8px;
+    height: 2px;
+    transform-origin: 7px;
+    background-color: #168f4c;
+}
+
+.month-select::after,
+.year-select::after {
+    transform: rotate(45deg);
+}
+
+.month-select::before,
+.year-select::before {
+    transform: rotate(135deg);
+}
+
+.month-select option,
+.year-select option {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+option:not(:checked) {
+    background-color: rgba(115, 229, 162, 0.425);
+}
+
+option::checked {
+    background: red !important;
+    color: gray;
+}
+
+ion-icon,
+span {
+    display: block;
+}
+
+.total {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    /* padding: 10px 28px; */
+    /* margin: 0 auto; */
+
+}
+
+#total-hours {
+    z-index: 10;
+}
+
+.main-inputs {
+    background-color: rgba(115, 220, 229, 0.3);
+    border-radius: 12px;
+    padding: 15px 0 10px 0;
+    margin-bottom: 20px;
+}
+
+input[type="datetime-local" i] {
+    width: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.input-item {
+    margin-bottom: 15px;
+    padding: 0 8px;
+}
+
+/*.wrapper .input-item:nth-child(4) {*/
+/*    background-color: indianred !important;*/
+/*}*/
+#loco {
+    appearance: none;
+    background-color: #fff;
+}
+
+input,
+select {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 8px;
+    font-family: 'Noto Sans', sans-serif !important;
+}
+
+input[type="text"] {
+    font-size: 14px;
+    background-color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+input[type="text"]::placeholder {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.submit-btn {
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 28px;
+    background-color: rgba(84, 156, 238, 0.73);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.outputs-header {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 40%;
+    padding: 10px 5px;
+    background-color: #d4d8e8;
+    margin-bottom: 12px;
+    border-radius: 7px;
+}
+
+table,
+th,
+td {
+    border: none;
+    border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+
+.outputs-header td {
+    position: relative;
+    padding: 9px 0;
+    text-align: center;
+}
+
+.delete {
+    position: relative;
+    width: 30px;
+}
+
+
+
+.delete-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.info-button {
+    background-color: rgb(255, 238, 83);
+    padding: 7px 15px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #ff4545;
+}
+
+.delete-btn:hover {
+    background-color: rgb(240, 103, 103);
+}
+
+.delete-btn::before,
+.close-btn::before,
+.delete-btn::after,
+.close-btn::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 20px;
+    transform-origin: 10px;
+    right: 4px;
+    height: 2px;
+    background-color: #3d3d3d;
+    pointer-events: none;
+}
+
+.delete-btn::before,
+.close-btn::before {
+    transform: rotate(45deg);
+}
+
+.delete-btn::after,
+.close-btn::after {
+    transform: rotate(-45deg);
+}
+
+.close-btn::after,
+.close-btn::before {
+    width: 30px;
+    height: 3px;
+    transform-origin: 15px;
+    left: 5px;
+
+}
+
+
+.outputs-table {
+    width: 100%;
+    overflow: hidden;
+    transition: ease-out .6s;
+}
+
+.tr-row {
+    transition: ease 0.7s;
+}
+
+
+.empty-cell {
+    width: 100%;
+    height: 30px;
+    background-color: #fff;
+}
+
+/* Info dialog */
+.info-dialog {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    padding: 15px;
+    overflow: hidden;
+    background-color: #d7f3db;
+
+}
+
+.info-table {
+    width: 100%;
+    padding-top: 45px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.info-table span {
+    display: flex;
+    align-items: center;
+    background-color: rgb(125, 167, 245);
+    padding: 10px 12px;
+    border-radius: 4px;
+    color: #3d3d3d;
+    font-weight: 500;
+}
+
+.details {
+    font-weight: 400;
+}
+
+/* Accordion styles */
+
+.row-content {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    will-change: max-height;
+    transition: 0.5s ease-out;
+    box-sizing: content-box;
+    margin-top: 10px;
+    padding: 10px 5px;
+    background-color: #5de2c7;
+    font-size: 16px;
+    border-radius: 7px;
+}
+
+.visible {
+    max-height: max-content;
+    opacity: 1;
+    display: flex;
+    transition: 0.5s ease-out;
+}
+
+/* Outputs grid */
+.output-grid {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 30% 10%;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.main-block {
+    background-color: rgba(112, 245, 117, 0.46);
+    margin-bottom: 10px;
+    border-radius: 7px;
+    transition: ease-out 0.3s;
+    cursor: pointer;
+}
+
+.output-grid>div {
+    align-self: center;
+}
+
+
+
+input {
+    font-size: 16px !important;
+}
+
+select {
+    color: grey;
+    font-size: 16px;
+}
+
+option {
+    font-size: 16px;
+    color: #000;
+}
+
+strong {
+    font-weight: 500;
+    display: inline-block;
+}
